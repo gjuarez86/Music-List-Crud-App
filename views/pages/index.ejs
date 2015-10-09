@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music</title>
+</head>
+<body>
+	<h3>My Favorite Song List</h3>
+<p>
+	<% music.forEach(function(list) { %>
+
+		<p>Name: <%=	list.Name %></p>
+		<p>Artist: <%= list.Artist %></p>
+		<p>Genre: <%= list.Genre %></p>
+		<p>Rating: <%= list.Rating %></p>
+		<a href = "<%="/music/"+list._id%>">Edit</a> <!--create a new url that is going to have the object unique id as the new page.
+		the dinasour or music is there just to add a string to know where we are. We aren't actually accessing anything. 
+		+list is in reference to <%=	list.Name %> (high order functions)... -->
+	<%	}); %>
+	<form action="/song" method="get">
+		<button>Add Song</button>
+	</form>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Music Details</title>
+</head>
+<body>
+<h1>Change the Details:</h1>
+<form action="/edit" method="post"> <!-- -->
+	<input type="hidden" name="id" value="<%=songs._id%>"><!-- the value is getting the id number. When you go to new page no way to get id name. You are trying to grabd the object by its id. It's having an input box with the id info. so this calls it. -->
+	  Song Name: <input type="text" name="Name"><br> <!--n -->
+	  Artist: <input type="text" name="Artist"><br><!---->
+	  Genre: <input type="text" name="Genre"><br>
+	  Rating from 1 to 10: <input type="number" name="Rating"><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<form action="/delete" method="post">
+	<input type="hidden" name="id" value="<%=songs._id%>">
+	<button>Delete</button>
+</form>
+
+</body>
+</html>

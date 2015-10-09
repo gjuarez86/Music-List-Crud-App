@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music</title>
+</head>
+<body>
+<h1>Rate Your Favorite Song:</h1>
+<form action="/create" method="post"> <!--use this action to call it, method post is what we will use in the server file..method is for app.post....action in the app.post...does method refer to the post in server.js file and /create -->
+  Song Name: <input type="text" name="Name"><br> <!-- name is like the id so when you use jquery this is wahat you would put $('#song')...ask allen -->
+  Artist: <input type="text" name="Artist"><br><!--name has to match with the music.js schema it's cap sensitive -->
+  Genre: <input type="text" name="Genre"><br>
+  Rating from 1 to 10: <input type="number" name="Rating"><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
